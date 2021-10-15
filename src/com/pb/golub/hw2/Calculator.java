@@ -26,7 +26,7 @@ public class Calculator {
                 break;
             case "/":
                 if (operand2 == 0) {
-                    System.out.println("На ноль делить нельзя!");
+                    System.out.println("Не ломайте математику!");
                 } else {
                     System.out.println("Ваш ответ = " + (operand1 / operand2));
                 }
