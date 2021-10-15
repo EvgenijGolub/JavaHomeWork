@@ -30,6 +30,7 @@ public class Calculator {
                 } else {
                     System.out.println("Ваш ответ = " + (operand1 / operand2));
                 }
+
                 break;
         }
     }
