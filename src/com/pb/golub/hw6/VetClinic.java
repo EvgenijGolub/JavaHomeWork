@@ -6,6 +6,6 @@ public class VetClinic {
         Dog dog = new Dog();
         Horse horse = new Horse();
         Animal [] animals = new Animal[] {cat, dog, horse};
-        //дальше не смог понять - каким образом передать массив данных в класс veterinarian
         }
+        animals.treatAnimal;
     }
