@@ -8,24 +8,24 @@ public class Reader {
     String birthdate;
     String telnumber;
 
-    public void takeBook(int takenbook){
-        System.out.println(username + " взял " + takenbook +  "книги ");
+    public void takeBook(int bookCount){
+        System.out.println(username + " взял " + bookCount +  "книги ");
     }
-    public void takeBook(String title){
-        System.out.println(username + " взял книги " + title);
+    public void takeBook(String bookNames){
+        System.out.println(username + " взял книги " + bookNames);
     }
-    public void takeBook(String title, String autorsname, String year){
-        System.out.println(username + " взял книги: " + title + autorsname + year);
+    public void takeBook(String bookNames, String autorsname, String year){
+        System.out.println(username + " взял книги: " + bookNames + autorsname + year);
     }
 
-    public void returnBook(int takenbook){
-        System.out.println(username + " вернул " + takenbook +  "книги ");
+    public void returnBook(int bookCount){
+        System.out.println(username + " вернул " + bookCount +  "книги ");
     }
-    public void returnBook(String title){
-        System.out.println(username + " вернул книги " + title);
+    public void returnBook(String bookNames){
+        System.out.println(username + " вернул книги " + bookNames);
     }
-    public void returnBook(String title, String autorsname, String year){
-        System.out.println(username + " вернул книги: " + title + autorsname + year);
+    public void returnBook(String bookNames, String autorsname, String year){
+        System.out.println(username + " вернул книги: " + bookNames + autorsname + year);
     }
 
     String getinfousr(){
