@@ -3,21 +3,31 @@ package com.pb.golub.hw6;
 import java.util.Objects;
 
 public class Cat extends Animal {
-    String name = "Кот";
-    String noise = "мяукает";
-    String food = "мясо";
-    String location = "лукошко";
+    private String color;
 
-    public void makeNoise(){
-        System.out.println(name + noise);
+    public Cat(String name, String color) {
+        super(name);
+        this.color = color;
     }
 
-    public void eat(){
-        System.out.println(name + "ест" + food);
+    @Override
+    public void makeNoise() {
+        System.out.println("Мяукает");;
     }
 
-    public void sleep(){
-        System.out.println(name + "спит");
+    @Override
+    public void eat() {
+        System.out.println("Кот ест");;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "food='" + food + '\'' +
+                ", location='" + location + '\'' +
+                ", name='" + name + '\'' +
+                ", breed='" + color + '\'' +
+                '}';
     }
 
     @Override
@@ -26,19 +36,11 @@ public class Cat extends Animal {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Cat cat = (Cat) o;
-        return Objects.equals(food, cat.food) && Objects.equals(location, cat.location);
+        return Objects.equals(color, cat.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), food, location);
-    }
-
-    @Override
-    public String toString() {
-        return "Cat{" +
-                "food='" + food + '\'' +
-                ", location='" + location + '\'' +
-                '}';
+        return Objects.hash(super.hashCode(), color);
     }
 }

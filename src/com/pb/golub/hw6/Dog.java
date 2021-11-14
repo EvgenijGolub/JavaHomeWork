@@ -3,21 +3,31 @@ package com.pb.golub.hw6;
 import java.util.Objects;
 
 public class Dog extends  Animal{
-    String name = "Собака";
-    String noise = "лает";
-    String food = "кость";
-    String location = "будка";
+    private String breed;
 
-    public void makeNoise(){
-        System.out.println(name + noise);
+    public Dog(String name, String breed) {
+        super(name);
+        this.breed = breed;
     }
 
-    public void eat(){
-        System.out.println(name + "ест" + food);
+    @Override
+    public void makeNoise() {
+        System.out.println("Лает");;
     }
 
-    public void sleep(){
-        System.out.println(name + "спит");
+    @Override
+    public void eat() {
+        System.out.println("Собака ест");;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "food='" + food + '\'' +
+                ", location='" + location + '\'' +
+                ", name='" + name + '\'' +
+                ", breed='" + breed + '\'' +
+                '}';
     }
 
     @Override
@@ -26,19 +36,11 @@ public class Dog extends  Animal{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Dog dog = (Dog) o;
-        return Objects.equals(food, dog.food) && Objects.equals(location, dog.location);
+        return Objects.equals(breed, dog.breed);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), food, location);
-    }
-
-    @Override
-    public String toString() {
-        return "Dog{" +
-                "food='" + food + '\'' +
-                ", location='" + location + '\'' +
-                '}';
+        return Objects.hash(super.hashCode(), breed);
     }
 }
