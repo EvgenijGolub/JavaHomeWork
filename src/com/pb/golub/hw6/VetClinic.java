@@ -1,6 +1,7 @@
 package com.pb.golub.hw6;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
 public class VetClinic {
     public static void main(String[] args) throws Exception {
@@ -20,9 +21,11 @@ public class VetClinic {
 
         Class clazz = Class.forName("hw6.Veterinarian");
         Constructor constr =  clazz.getConstructor();
-        Object vet = constr.newInstance();
-
-        clazz.getMethod("treatAnimal", A);
-
+        Object vet = constr.newInstance("Ветеринар");
+        Method treatAnimal = clazz.getMethod("treatAnimal", Animal.class);
+        for (Animal animal: animals) {
+            treatAnimal.invoke(vet, animal);
+        }
+        Class catClazz = Cat.class;
     }
 }
