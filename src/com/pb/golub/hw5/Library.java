@@ -50,11 +50,11 @@ public class Library {
         System.out.println(reader3.getinfousr());
 
         reader1.takeBook(int takenbook);
-        reader1.takeBook(String title);
-        reader1.takeBook(String title, String autorsname, String year);
+        reader1.takeBook(String bookNames);
+        reader1.takeBook(String bookNames, String autorsname, String year);
 
         reader1.returnBook(int takenbook);
-        reader1.returnBook(String title);
-        reader1.returnBook(String title, String autorsname, String year);
+        reader1.returnBook(String bookNames);
+        reader1.returnBook(String bookNames, String autorsname, String year);
     }
 }
