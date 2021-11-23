@@ -8,12 +8,10 @@ import java.io.Writer;
 
 public class FileNumbers {
     public static void createNumbersFile(){
-        int q = 1;
-        int w = 99;
         int[][] A = new int[10][10];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                A[i][j] = q + (int) (Math.random() * (w - q) + 1);
+                A[i][j] = 1 + (int) (Math.random() * (99 - 1) + 1);
             }
         }
         try (Writer writer = new FileWriter("files/numbers.txt")){
